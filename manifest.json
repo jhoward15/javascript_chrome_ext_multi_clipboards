@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Alternate Clipboard",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A Chrome extension that creates a temporary storage location for copied text and allows for hotkey configuration.",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  "permissions": ["clipboardWrite", "clipboardRead", "commands", "tabs", "storage"],
+  "permissions": ["clipboardWrite", "clipboardRead", "commands", "tabs", "storage", "scripting"],
   "commands": {
     "copy": {
       "suggested_key": {

@@ -20,10 +20,7 @@ chrome.commands.onCommand.addListener(function (command) {
 function copyToClipboard(clipboardNum) {
   console.log("copyToClipboard");
   chrome.tabs.executeScript({
-    code:
-      "var selectedText = window.getSelection().toString(); chrome.storage.local.set({ 'clipboard" +
-      clipboardNum +
-      "': selectedText });",
+    code: "",
   });
 }
 
