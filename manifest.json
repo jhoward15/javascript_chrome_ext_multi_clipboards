@@ -11,17 +11,29 @@
   "permissions": ["clipboardWrite", "clipboardRead", "commands", "tabs", "storage", "scripting"],
   "host_permissions": ["*://*/*", "<all_urls>"],
   "commands": {
-    "copy": {
+    "copy1": {
       "suggested_key": {
-        "default": "Ctrl+Shift+C"
+        "default": "Ctrl+1"
       },
-      "description": "Copy selected text to alternate clipboard"
+      "description": "Copy selected text to alternate clipboard 1"
     },
-    "paste": {
+    "copy2": {
       "suggested_key": {
-        "default": "Ctrl+Shift+V"
+        "default": "Ctrl+2"
       },
-      "description": "Paste text from alternate clipboard"
+      "description": "Copy selected text to alternate clipboard 2"
+    },
+    "paste1": {
+      "suggested_key": {
+        "default": "Alt+1"
+      },
+      "description": "Paste text from alternate clipboard 2"
+    },
+    "paste2": {
+      "suggested_key": {
+        "default": "Alt+2"
+      },
+      "description": "Paste text from alternate clipboard 2"
     }
   },
   "background": {
