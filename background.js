@@ -38,13 +38,13 @@ function pasteFromClipboard(clipboardNum) {
           target: { tabId: tabs[0].id },
           func: (pasteValue) => {
             console.log("Paste text to page: " + pasteValue);
-            var input = document.activeElement;
-            var textToInsert = "hello world";
-            var cursorPosition = input.selectionStart;
-            var currentValue = input.value;
-            var newValue = currentValue.slice(0, cursorPosition) + textToInsert + currentValue.slice(cursorPosition);
+            const input = document.activeElement;
+            const cursorPosition = input.selectionStart;
+            const currentValue = input.value;
+            const newValue =
+              currentValue.slice(0, cursorPosition) + pasteValue + currentValue.slice(input.selectionEnd);
             input.value = newValue;
-            var newCursorPosition = cursorPosition + textToInsert.length;
+            const newCursorPosition = cursorPosition + pasteValue.length;
             input.setSelectionRange(newCursorPosition, newCursorPosition);
             input.focus();
           },
