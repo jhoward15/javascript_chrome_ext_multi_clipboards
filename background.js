@@ -21,6 +21,7 @@ function copyToClipboard(clipboardNum) {
       func: (clipboardNum) => {
         selectedText = window.getSelection().toString();
         chrome.storage.local.set({ ["clipboard" + clipboardNum]: [selectedText] });
+        console.log("Copied text to clipboard" + clipboardNum + ": '" + selectedText + "'");
       },
     });
   });
@@ -31,7 +32,7 @@ function pasteFromClipboard(clipboardNum) {
   console.log("Paste from clipboard: " + clipboardNum);
   chrome.storage.local.get(["clipboard" + clipboardNum], function (result) {
     if (result["clipboard" + clipboardNum]) {
-      console.log("Paste text from clipboard: " + result["clipboard" + clipboardNum]);
+      console.log("Paste text from clipboard" + clipboardNum + ": '" + result["clipboard" + clipboardNum] + "'");
       chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
         chrome.scripting.executeScript({
           args: [result["clipboard" + clipboardNum]],
