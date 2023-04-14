@@ -113,11 +113,16 @@ function pasteFromClipboard(clipboardNum) {
       chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
         chrome.scripting.executeScript({
           args: [result["10_Clips_clipboard_" + clipboardNum].toString()],
-          target: { tabId: tabs[0].id },
+          target: { tabId: tabs[0].id, allFrames: true },
           func: (pasteValue) => {
             console.log(`[10 Clips] Paste text to page: '${pasteValue}' [length: ${pasteValue.length}]`);
             const input = document.activeElement;
             const cursorPosition = input.selectionStart;
+            if (cursorPosition === undefined) {
+              console.log(`[10 Clips] Error getting cursor position for element: ${input}`);
+              return;
+            }
+
             const currentValue = input.value;
             const newValue =
               currentValue.slice(0, cursorPosition) + pasteValue + currentValue.slice(input.selectionEnd);
