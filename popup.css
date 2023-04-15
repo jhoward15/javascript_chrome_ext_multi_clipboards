@@ -1,5 +1,13 @@
 body {
   width: 400px;
-  height: 300px;
+  height: 400px;
   margin: 20px;
+}
+
+li {
+  font-size: 14px;
+}
+
+ul {
+  padding-bottom: 3px;
 }

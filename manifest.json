@@ -1,98 +1,89 @@
 {
   "manifest_version": 3,
   "name": "10 Clips",
-  "version": "1.1",
+  "version": "1.2",
   "description": "A Chrome extension that creates a temporary storage location for copied text and allows for hotkey configuration.",
   "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "16": "icon16new.png",
+    "48": "icon48new.png",
+    "128": "icon128new.png"
   },
   "permissions": ["clipboardWrite", "clipboardRead", "commands", "tabs", "storage", "scripting"],
   "host_permissions": ["*://*/*", "<all_urls>"],
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "icon128.png",
-    "browser_style": true
+    "default_icon": "icon128new.png",
+    "browser_style": true,
+    "suggested_key": {
+      "default": "Ctrl+0"
+    }
   },
   "commands": {
-    "clearall": {
-      "suggested_key": {
-        "default": "Ctrl+0"
-      },
-      "description": "Clear ALL 10 alternate clipboards"
-    },
-    "displayall": {
-      "suggested_key": {
-        "default": "Ctrl+9"
-      },
-      "description": "Display the values of all 10 alternate clipboards"
-    },
     "copy1": {
       "suggested_key": {
         "default": "Shift+Ctrl+1"
       },
-      "description": "Copy selected text to alternate clipboard 1"
+      "description": "Copy to clipboard 1"
     },
     "copy2": {
-      "description": "Copy selected text to alternate clipboard 2"
+      "description": "Copy to clipboard 2"
     },
     "copy3": {
-      "description": "Copy selected text to alternate clipboard 3"
+      "description": "Copy to clipboard 3"
     },
     "copy4": {
-      "description": "Copy selected text to alternate clipboard 4"
+      "description": "Copy to clipboard 4"
     },
     "copy5": {
-      "description": "Copy selected text to alternate clipboard 5"
+      "description": "Copy to clipboard 5"
     },
     "copy6": {
-      "description": "Copy selected text to alternate clipboard 6"
+      "description": "Copy to clipboard 6"
     },
     "copy7": {
-      "description": "Copy selected text to alternate clipboard 7"
+      "description": "Copy to clipboard 7"
     },
     "copy8": {
-      "description": "Copy selected text to alternate clipboard 8"
+      "description": "Copy to clipboard 8"
     },
     "copy9": {
-      "description": "Copy selected text to alternate clipboard 9"
+      "description": "Copy to clipboard 9"
     },
     "copy10": {
-      "description": "Copy selected text to alternate clipboard 10"
+      "description": "Copy to clipboard 10"
     },
     "paste1": {
       "suggested_key": {
         "default": "Shift+Alt+1"
       },
-      "description": "Paste text from alternate clipboard 1"
+      "description": "Paste from clipboard 1"
     },
     "paste2": {
-      "description": "Paste text from alternate clipboard 2"
+      "description": "Paste from clipboard 2"
     },
     "paste3": {
-      "description": "Paste text from alternate clipboard 3"
+      "description": "Paste from clipboard 3"
     },
     "paste4": {
-      "description": "Paste text from alternate clipboard 4"
+      "description": "Paste from clipboard 4"
     },
     "paste5": {
-      "description": "Paste text from alternate clipboard 5"
+      "description": "Paste from clipboard 5"
     },
     "paste6": {
-      "description": "Paste text from alternate clipboard 6"
+      "description": "Paste from clipboard 6"
     },
     "paste7": {
-      "description": "Paste text from alternate clipboard 7"
+      "description": "Paste from clipboard 7"
     },
     "paste8": {
-      "description": "Paste text from alternate clipboard 8"
+      "description": "Paste from clipboard 8"
     },
     "paste9": {
-      "description": "Paste text from alternate clipboard 9"
+      "description": "Paste from clipboard 9"
     },
     "paste10": {
-      "description": "Paste text from alternate clipboard 10"
+      "description": "Paste from clipboard 10"
     }
   },
   "background": {

@@ -1,16 +1,27 @@
 <html>
   <head>
-    <title>Clipboards</title>
     <!--
-      <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css" />
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
     -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <meta charset="utf-8" />
+    <title>Clipboards</title>
     <link rel="stylesheet" type="text/css" href="popup.css" />
   </head>
   <body>
     <div class="container">
-      <h1 class="">Clipboards</h1>
-      <ul id="clipboards-list"></ul>
+      <h6 class="">Clipboards</h6>
+      <ul class="list-group list-group-flush" id="clipboards-list"></ul>
+    </div>
+    <div class="text-right" style="padding-bottom: 12px">
+      <button type="button" class="btn btn-primary btn-sm" id="clear-all-button">Clear</button>
+      <button type="button" class="btn btn-secondary btn-sm" id="close-button">Close</button>
     </div>
     <script src="popup.js"></script>
   </body>
