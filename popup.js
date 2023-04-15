@@ -21,8 +21,6 @@ function displayClipboardContents() {
       const clipboardItem = document.createElement("li");
       clipboardItem.classList.add("list-group-item");
       clipboardItem.classList.add("text-truncate");
-      //clipboardItem.classList.add("h7");
-      //clipboardItem.className = ".small";
       clipboardItem.innerHTML = clipboard;
       clipboardsList.appendChild(clipboardItem);
     });
