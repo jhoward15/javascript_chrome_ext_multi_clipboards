@@ -4,10 +4,12 @@ function displayClipboardContents() {
   for (let i = 1; i <= 10; i++) {
     chrome.storage.local.get(["10_Clips_clipboard_" + i], function (result) {
       if (result["10_Clips_clipboard_" + i]) {
-        var clipboardValue =
-          result["10_Clips_clipboard_" + i].toString().length > 30
-            ? result["10_Clips_clipboard_" + i].toString().substring(0, 47) + "..."
-            : result["10_Clips_clipboard_" + i].toString();
+        var clipboardValue = result["10_Clips_clipboard_" + i].toString();
+        // Using Bootstrap to truncate the text, so don't need to do it here
+        // var clipboardValue =
+        //   result["10_Clips_clipboard_" + i].toString().length > 50
+        //     ? result["10_Clips_clipboard_" + i].toString().substring(0, 50) + "..."
+        //     : result["10_Clips_clipboard_" + i].toString();
         clipboard = `<span style="color:lightgrey;">${String(i).padStart(
           2,
           "0"
@@ -18,6 +20,7 @@ function displayClipboardContents() {
       console.log(`[10 Clips] Clipboard ${i}: ${result["10_Clips_clipboard_" + i]}`);
       const clipboardItem = document.createElement("li");
       clipboardItem.classList.add("list-group-item");
+      clipboardItem.classList.add("text-truncate");
       //clipboardItem.classList.add("h7");
       //clipboardItem.className = ".small";
       clipboardItem.innerHTML = clipboard;
